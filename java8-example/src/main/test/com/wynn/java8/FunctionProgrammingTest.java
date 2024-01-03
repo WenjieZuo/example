@@ -1,5 +1,6 @@
 package com.wynn.java8;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.function.Function;
@@ -16,6 +17,6 @@ public class FunctionProgrammingTest {
     @Test
     public void curryTest() {
         Function<Integer, Function<Integer, Integer>> fun = x -> y -> x + y;
-        System.out.println(fun.apply(2).apply(3)); //5
+        Assert.assertSame(5, fun.apply(2).apply(3)); //5
     }
 }
