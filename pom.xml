@@ -5,8 +5,8 @@
 
     <modules>
         <module>common-lang3-example</module>
-        <module>java8</module>
-        <module>quartz</module>
+        <module>java8-example</module>
+        <module>quartz-example</module>
     </modules>
 
     <parent>
@@ -23,5 +23,11 @@
 
     <name>example</name>
     <description>example</description>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 </project>

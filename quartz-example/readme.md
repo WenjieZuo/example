@@ -1,0 +1,5 @@
+理解quartz核心组件
+JobDetail
+Job
+Trigger
+Scheduler

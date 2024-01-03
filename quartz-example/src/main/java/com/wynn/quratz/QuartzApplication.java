@@ -1,5 +1,6 @@
 package com.wynn.quratz;
 
+import com.wynn.quratz.job.MyJob;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.impl.JobDetailImpl;
@@ -23,11 +24,10 @@ public class QuartzApplication {
         jobDetailImpl.setJobClass(MyJob.class);
         //设置触发器
         CronTriggerImpl cronTrigger = new CronTriggerImpl();
-        cronTrigger.setJobKey(jobDetailImpl.getKey());
-        cronTrigger.setCronExpression("0/1 * * * * ?");
         cronTrigger.setName("name");
         cronTrigger.setGroup("group");
-
+        cronTrigger.setJobKey(jobDetailImpl.getKey());
+        cronTrigger.setCronExpression("0/1 * * * * ?");
 
         Scheduler scheduler = run.getBean("scheduler", Scheduler.class);
         scheduler.scheduleJob(jobDetailImpl, cronTrigger);

@@ -1,4 +1,4 @@
-package com.wynn.quratz;
+package com.wynn.quratz.config;
 
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;

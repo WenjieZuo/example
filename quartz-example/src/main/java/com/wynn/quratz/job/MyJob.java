@@ -1,4 +1,4 @@
-package com.wynn.quratz;
+package com.wynn.quratz.job;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
